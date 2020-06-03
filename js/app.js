@@ -318,25 +318,37 @@ document.getElementById("save").addEventListener("click", function(){
 			localStorage.setItem('timezone', selectTimeZone);
 			alert("Settings successfully saved");
 
-}
+})
 }
 
 document.getElementById("save").addEventListener("click", function(){
+
 	const emailCheckbox = document.getElementById('email');
+	const notifyCheckbox = document.getElementById('notify');
+
 	if (emailCheckbox.checked) {
 		localStorage.setItem('email', 'on');
-	} 
+	}
 	else {
 		localStorage.setItem('email', 'off');
+		
 	}
 
-	const notifyCheckbox = document.getElementById('notify');
-		if (notifyCheckbox.checked) {
-			localStorage.setItem('notify', 'on');
-		}
-			else { 
-				localStorage.setItem('notify', 'off');
-			}
+
+
+	 if (notifyCheckbox.checked) {
+		localStorage.setItem('notify', 'on');
+	 }
+	 else {
+	 	localStorage.setItem('notify', 'off');
+	 }
+	
+		//if (notifyCheckbox.checked) {
+		//	localStorage.setItem('notify', 'on');
+		// }
+		//	else { 
+		//		localStorage.setItem('notify', 'off');
+		//	}
 
 
 	const selectTimeZone = document.getElementById('timezone').value;
@@ -363,17 +375,18 @@ const loadSettings = function() {
 
 	if (emailSetting === 'on') {
 		emailCheckBox.checked = true;
-	} 
+	}
 	else {
 		emailCheckBox.checked = false;
 	}
-
-	if (notifySetting === 'on') {
+	
+	 if (notifySetting === 'on') {
 		notifyCheckbox.checked = true;
-	}else {
-		notifyCheckbox.checked = false;
-	}
-
+		}
+		else {
+			notifyCheckbox.checked = false;
+		}
+	
 
 	document.getElementById('timezone').value = localStorage.getItem('timezone');
 }
@@ -382,10 +395,6 @@ loadSettings();
 
 
 
-const loadSettings = function() {
-  document.getElementById('timezone').value = localStorage.getItem('timezone');
-}
-loadSettings();
 
 
 
