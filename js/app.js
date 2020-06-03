@@ -370,8 +370,7 @@ const loadSettings = function() {
 	const emailCheckBox = document.getElementById('email');
 	const emailSetting = localStorage.getItem('email');
 
-	const notifyCheckbox = document.getElementById('notify');
-	const notifySetting = localStorage.getItem('notify');
+	
 
 	if (emailSetting === 'on') {
 		emailCheckBox.checked = true;
@@ -380,12 +379,7 @@ const loadSettings = function() {
 		emailCheckBox.checked = false;
 	}
 	
-	 if (notifySetting === 'on') {
-		notifyCheckbox.checked = true;
-		}
-		else {
-			notifyCheckbox.checked = false;
-		}
+	 
 	
 
 	document.getElementById('timezone').value = localStorage.getItem('timezone');
@@ -395,8 +389,19 @@ loadSettings();
 
 
 
+function(loadSettings) {
+	const notifyCheckbox = document.getElementById('notify');
+	const notifySetting = localStorage.getItem('notify');
 
+	if (notifySetting === 'on') {
+		notifyCheckbox.checked = true;
+		}
+		else {
+			notifyCheckbox.checked = false;
+		}
+}
 
+loadSettings();
 
 
 
