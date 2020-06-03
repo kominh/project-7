@@ -324,7 +324,7 @@ document.getElementById("save").addEventListener("click", function(){
 document.getElementById("save").addEventListener("click", function(){
 
 	const emailCheckbox = document.getElementById('email');
-	const notifyCheckbox = document.getElementById('notify');
+	
 
 	if (emailCheckbox.checked) {
 		localStorage.setItem('email', 'on');
@@ -334,7 +334,7 @@ document.getElementById("save").addEventListener("click", function(){
 		
 	}
 
-
+	const notifyCheckbox = document.getElementById('notify');
 
 	 if (notifyCheckbox.checked) {
 		localStorage.setItem('notify', 'on');
@@ -379,17 +379,6 @@ const loadSettings = function() {
 		emailCheckBox.checked = false;
 	}
 	
-	 
-	
-
-	document.getElementById('timezone').value = localStorage.getItem('timezone');
-}
-
-loadSettings();
-
-
-
-function(loadSettings) {
 	const notifyCheckbox = document.getElementById('notify');
 	const notifySetting = localStorage.getItem('notify');
 
@@ -399,9 +388,16 @@ function(loadSettings) {
 		else {
 			notifyCheckbox.checked = false;
 		}
+	
+
+	document.getElementById('timezone').value = localStorage.getItem('timezone');
 }
 
 loadSettings();
+
+
+
+
 
 
 
