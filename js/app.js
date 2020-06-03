@@ -315,7 +315,7 @@ document.getElementById("save").addEventListener("click", function(){
 
 			localStorage.setItem('email', '');
 			localStorage.setItem('notify', '');
-			localStorage.setItem('timezone', selectTimeZone);
+			localStorage.setItem('timezone', 'selectTimeZone');
 			alert("Settings successfully saved");
 
 })
@@ -324,7 +324,7 @@ document.getElementById("save").addEventListener("click", function(){
 document.getElementById("save").addEventListener("click", function(){
 
 	const emailCheckbox = document.getElementById('email');
-	
+	const notifyCheckbox = document.getElementById('notify');
 
 	if (emailCheckbox.checked) {
 		localStorage.setItem('email', 'on');
@@ -334,7 +334,7 @@ document.getElementById("save").addEventListener("click", function(){
 		
 	}
 
-	const notifyCheckbox = document.getElementById('notify');
+
 
 	 if (notifyCheckbox.checked) {
 		localStorage.setItem('notify', 'on');
