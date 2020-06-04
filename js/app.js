@@ -310,15 +310,22 @@ function testStorage() {
 
 if(testStorage() === true){ 
 
+	const selectTimeZone = document.getElementById('timezone');
+    const emailCheckbox = document.getElementById('email');
+    const notifyCheckbox = document.getElementById('notify');
+    document.getElementById("save").addEventListener("click", function () {
 
-document.getElementById("save").addEventListener("click", function(){
+          localStorage.setItem('email', emailCheckbox.checked);
+          localStorage.setItem('notify', notifyCheckbox.checked);
+          localStorage.setItem('timezone', selectTimeZone.selectedIndex);
+          alert("Settings successfully saved");
+        });
+        
+        emailCheckbox.checked = JSON.parse(localStorage.getItem('email'));
+        notifyCheckbox.checked = JSON.parse(localStorage.getItem('notify'));
+        selectTimeZone.selectedIndex = localStorage.getItem('timezone');
 
-			localStorage.setItem('email', '');
-			localStorage.setItem('notify', '');
-			localStorage.setItem('timezone', 'selectTimeZone');
-			alert("Settings successfully saved");
 
-})
 }
 
 document.getElementById("save").addEventListener("click", function(){
