@@ -341,6 +341,16 @@ input {
 
 
 
+
+/* Style the active class, and buttons on mouse-over */
+.active, .btn:hover {
+  background-color: lightgreen;
+  color: white;
+}
+
+
+
+
 /* ===================================== 
    Chart div
 ======================================== */

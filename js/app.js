@@ -57,9 +57,23 @@ window.onclick = function (event) {
 
 
 
+// Add active class to the current button (highlight it)
 
 
+function active() {
 
+var header = document.getElementById("traffic-nav");
+var btns = document.getElementsByClassName("traffic-nav-link");
+
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+};
 
 
 
@@ -102,18 +116,17 @@ const element = e.target;
 
 /* chart widgets */
 
-
-
-
-
+const monthlyData = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const weeklyData = ["Week1", "Week2", "Week3", "Week4", "Week5"];
+const dayData = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+const hourData = ["0100", "0200", "0300", "0400", "0500", "0600", "0700", "0800" ];
 const trafficCanvas = document.getElementById('traffic-chart');
 
 let trafficData = {
 
 
 				/* data at bottom of chart  */
-		labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
-					"4-10", "11-17", "18-24", "25-31"],
+		labels: hourData,
 
 		datasets: [{
 						/* data on side of chart */
@@ -128,28 +141,34 @@ let trafficData = {
 
 
 function updateHour() {
-					trafficChart.data.datasets[0].data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+					//trafficChart.data.datasets[0].data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
+					trafficChart.data.labels = hourData;
 					trafficChart.update();
+					active();
+
 			};
 
 function updateDaily() {
-					trafficChart.data.labels = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+					trafficChart.data.labels = dayData;
 
 					trafficChart.update();
+					active();
 			};
 
 
 function updateWeekly() {
-					trafficChart.data.labels = ["Week1", "Week2", "Week3", "Week4", "Week5"];
+					trafficChart.data.labels = weeklyData;
 
 					trafficChart.update();
+					active();
 			};
 
 function updateMonthly() {
-					trafficChart.data.labels = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+					trafficChart.data.labels = monthlyData;
 
 					trafficChart.update();
+					active();
 			};
 
 
@@ -180,13 +199,6 @@ let trafficChart = new Chart(trafficCanvas, {
 		data: trafficData,
 		options: trafficOptions
 	});
-
-
-
-
-
-
-
 
 
 
