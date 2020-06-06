@@ -58,7 +58,7 @@ window.onclick = function (event) {
 
 
 // Add active class to the current button (highlight it)
-
+// highlite the active chart data menu
 
 function active() {
 
@@ -363,6 +363,38 @@ document.getElementById("save").addEventListener("click", function(){
 			localStorage.setItem('timezone', selectTimeZone);
 			//alert("Settings successfully saved");
 });
+
+
+
+
+
+
+document.getElementById('cancel').addEventListener('click', () => {
+
+	const cancel = confirm('Are you sure you want to cancel changes?');
+
+	const emailCheckbox = document.getElementById('email');
+	const notifyCheckbox = document.getElementById('notify');
+
+	const selectTimeZone = document.getElementById('timezone').value;
+
+    if (emailCheckbox.checked = true) {
+        emailCheckbox.checked = false;
+    }
+    if (notifyCheckbox.checked = true) {
+        notifyCheckbox.checked = false;
+    }
+    if (selectTimeZone.selectedIndex = 0) {
+        selectTimeZone.selectedIndex = 0;
+    }
+
+    localStorage.removeItem('email');
+    localStorage.removeItem('notify');
+    localStorage.removeItem('timezone');
+});
+
+
+
 
 
 
