@@ -373,7 +373,7 @@ document.getElementById('cancel').addEventListener('click', () => {
 	const emailCheckbox = document.getElementById('email');
 	const notifyCheckbox = document.getElementById('notify');
 
-	const selectTimeZone = document.getElementById('timezone').value;
+	const selectTimeZone = document.getElementById('timezone');
 
     if (emailCheckbox.checked = true) {
         emailCheckbox.checked = false;
