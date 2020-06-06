@@ -366,9 +366,6 @@ document.getElementById("save").addEventListener("click", function(){
 
 
 
-
-
-
 document.getElementById('cancel').addEventListener('click', () => {
 
 	const cancel = confirm('Are you sure you want to cancel changes?');
@@ -384,7 +381,7 @@ document.getElementById('cancel').addEventListener('click', () => {
     if (notifyCheckbox.checked = true) {
         notifyCheckbox.checked = false;
     }
-    if (selectTimeZone.selectedIndex = 0) {
+    if (selectTimeZone.selectedIndex != 0) {
         selectTimeZone.selectedIndex = 0;
     }
 
@@ -392,10 +389,6 @@ document.getElementById('cancel').addEventListener('click', () => {
     localStorage.removeItem('notify');
     localStorage.removeItem('timezone');
 });
-
-
-
-
 
 
 
