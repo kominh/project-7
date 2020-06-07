@@ -4,11 +4,13 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-color: gray;
+
 }
 
 
-
+h3, strong {
+  color: #676666;
+}
 
 /* ===================================== 
    Header
@@ -292,6 +294,11 @@ input {
     cursor: pointer;
 }
 
+.alert-banner p,
+.alert-banner strong {
+  color: white;
+}
+
 
 /* ===================================== 
    Traffic
@@ -318,7 +325,7 @@ input {
 
 .traffic-header h3 {
 	margin-right:auto;
-
+  color: gray;
 
 }
 
@@ -529,6 +536,7 @@ input {
 
 input {
     margin-top: 10px;
+    margin-bottom: 10px;s
     margin-right: 20px;
     float: right;
     border-radius: 5px;
