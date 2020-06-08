@@ -45,7 +45,9 @@ h3, strong {
 
 .bell {
 	transition: .2s;
+  fill: #ffffff;
 }
+
 
 
 .notif-icon {
