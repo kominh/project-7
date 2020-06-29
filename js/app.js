@@ -117,9 +117,17 @@ const element = e.target;
 /* chart widgets */
 
 const monthlyData = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const monthlyLabel = ["1000", "2000", "3000", "4000", "5000", "6000", "7000", "8000", "9000", "10000"];
+
 const weeklyData = ["Week1", "Week2", "Week3", "Week4", "Week5"];
+const weeklyLabel = ["100", "200", "300", "400", "500", "600", "700", "800", "900", "1000"];
+
 const dayData = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+const dayLabel = ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100"];
+
 const hourData = ["0100", "0200", "0300", "0400", "0500", "0600", "0700", "0800" ];
+const hourLabel = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+
 const trafficCanvas = document.getElementById('traffic-chart');
 
 let trafficData = {
@@ -130,8 +138,7 @@ let trafficData = {
 
 		datasets: [{
 						/* data on side of chart */
-				data: [10000, 8750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500
-					],
+				data: hourLabel,
 					backgroundColor: 'rgba(116, 119, 191, .3)',
 						borderWidth: 1,
 				}]
@@ -143,6 +150,7 @@ let trafficData = {
 function updateHour() {
 					//trafficChart.data.datasets[0].data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
+					trafficChart.data.datasets[0].data = hourLabel;
 					trafficChart.data.labels = hourData;
 					trafficChart.update();
 					active();
