@@ -117,16 +117,16 @@ const element = e.target;
 /* chart widgets */
 
 const monthlyData = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const monthlyLabel = ["1000", "2000", "3000", "4000", "5000", "6000", "7000", "8000", "9000", "10000"];
+const monthlyLabel = ["1800", "2470", "4500", "6750", "5000", "6350", "7800", "8000", "9000", "10000", "15000", "20000"];
 
 const weeklyData = ["Week1", "Week2", "Week3", "Week4", "Week5"];
-const weeklyLabel = ["100", "200", "300", "400", "500", "600", "700", "800", "900", "1000"];
+const weeklyLabel = ["100", "200", "150", "275", "500", "600", "700", "800", "900", "1000"];
 
 const dayData = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 const dayLabel = ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100"];
 
 const hourData = ["0100", "0200", "0300", "0400", "0500", "0600", "0700", "0800" ];
-const hourLabel = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+const hourLabel = ["1", "2", "1.75", "3.5", "2.8", "4.3", "6.4", "6.8", "9", "10"];
 
 const trafficCanvas = document.getElementById('traffic-chart');
 
@@ -158,6 +158,8 @@ function updateHour() {
 			};
 
 function updateDaily() {
+
+					trafficChart.data.datasets[0].data = dayLabel;
 					trafficChart.data.labels = dayData;
 
 					trafficChart.update();
@@ -166,6 +168,8 @@ function updateDaily() {
 
 
 function updateWeekly() {
+
+					trafficChart.data.datasets[0].data = weeklyLabel;
 					trafficChart.data.labels = weeklyData;
 
 					trafficChart.update();
@@ -173,6 +177,8 @@ function updateWeekly() {
 			};
 
 function updateMonthly() {
+
+					trafficChart.data.datasets[0].data = monthlyLabel;
 					trafficChart.data.labels = monthlyData;
 
 					trafficChart.update();
@@ -309,8 +315,8 @@ send.addEventListener('click', () => {
 				}	else if (message.value === "" ) { 
 						alert("Please fill out message field before sending");
 					}		else { 
-								alert('Message successfully sent to: ${user.value}');
-							}		
+								alert("Message successfully sent to: " +user.value);
+							}	
 
 });
 
