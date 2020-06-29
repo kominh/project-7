@@ -3,11 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>CSS Grid Layout Starer Files</title>
+	<title>My App</title>
 	<link rel="stylesheet" href="css/grid-styles.css">
 	
 	<link rel="stylesheet" href="css/page-styles.css">
 	<link rel="stylesheet" href="css/colors.css">
+
+	<link rel="stylesheet" href="css/awesomplete.css" >
 </head>
 
 
@@ -433,9 +435,11 @@
 			   
 			   <div class="message">
 			   	<h3>MESSAGE USER</h3>
-					<form class="widget-container" action="/action_page.php" autocomplete="on">
+					<form class="widget-container" action="index.html" autocomplete="on">
 						<input type="text" placeholder="Search for user"
-						class="form-field" id="userField">
+						class="form-field awesomplete" id="userField" data-list="Victoria Chambers, Dan Oliver, Dawn Wood, Dale Byrd" >
+						
+						
 						<textarea placeholder="Message for user" class="form-area"
 						id= "messageField" ></textarea>
 						<button class="button-primary" id="send" >Send</button>
@@ -511,7 +515,8 @@
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<script src="js/awesomplete.js"></script>	
 <script src="js/app.js"></script>
 
 
