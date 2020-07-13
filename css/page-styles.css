@@ -483,7 +483,7 @@ input {
     justify-content: flex-start;
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 10px;
+    padding-left: 0px;
     border-bottom-style: solid;
     border-width: 2px;
     border-color: gray;
@@ -499,13 +499,23 @@ input {
 .members-text,
 .members-comments {
     background-color: ;
-    width: 475px;
+    
     line-height: 1;
     padding-top: 0px;
 }
 
+.members-text p{
+  margin-right: px;
+  padding-right: 0px;
+  
+  background-color: pink;
+  position: relative;
+  z-index: +2;
+}
+
+
 /* ===================================== 
-   Message & settings
+   Message & settings width: 475px;
 ======================================== */
 
 .message-and-settings {

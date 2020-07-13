@@ -117,7 +117,7 @@ const element = e.target;
 /* chart widgets */
 
 const monthlyData = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const monthlyLabel = ["1800", "2470", "4500", "6750", "5000", "6350", "7800", "8000", "9000", "10000", "15000", "20000"];
+const monthlyLabel = ["1800", "2470", "4500", "6750", "5000", "6350", "7880", "8000", "9000", "10000", "15000", "20000"];
 
 const weeklyData = ["Week1", "Week2", "Week3", "Week4", "Week5"];
 const weeklyLabel = ["100", "200", "150", "275", "500", "600", "700", "800", "900", "1000"];
