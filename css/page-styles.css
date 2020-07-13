@@ -504,10 +504,16 @@ input {
 .members-text,
 .members-comments {
     background-color: ;
-    
+    width: 455px;
     line-height: 1;
     padding-top: 0px;
 }
+
+.members-comments { 
+  width: 450px;
+  background-color: yellow;
+}
+
 
 .members-text p{
   margin-right: px;
@@ -549,7 +555,7 @@ input {
     max-width: 100%;
     height: 35px;
     margin: 0px;
-    margin-top: 30px;
+    margin-top: 5px;
     padding-top: none;
 }
 
@@ -715,7 +721,7 @@ input:checked + .slider .off
 
 
 .angle-brk {
-		font-size: 2.5em;
+		font-size: 1.8em;
 		background-color: ;
 	}
 
