@@ -46,9 +46,14 @@ h3, strong {
 .bell {
 	
   fill: #ffffff;
+  transition: width 2s, height 2s, transform 2s;
+
 }
 .bell:hover {
   fill: red;
+  width: 45px;
+  width: 45px;
+  transform: rotate(360deg);
 }
 
 
