@@ -504,13 +504,13 @@ input {
 .members-text,
 .members-comments {
     background-color: ;
-    width: 455px;
+    margin-right: auto;
     line-height: 1;
     padding-top: 0px;
 }
 
 .members-comments { 
-  width: 450px;
+  
   background-color: yellow;
 }
 
@@ -520,8 +520,7 @@ input {
   padding-right: 0px;
   
   background-color: pink;
-  position: relative;
-  z-index: +2;
+  
 }
 
 
@@ -881,6 +880,22 @@ input:checked + .slider .off
 .members-text,
 .members-comments {
 	margin-right: auto;
+  line-height: 1;
+    padding-top: 0px;
+}
+
+
+.members-text,
+.members-comments {
+    background-color: ;
+    
+    line-height: 1;
+    padding-top: 0px;
+}
+
+.members-comments { 
+  
+  background-color: yellow;
 }
 
 
